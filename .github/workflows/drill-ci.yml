@@ -1,0 +1,14 @@
+name: Drill CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  drill-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberate failure step
+        run: |
+          echo "This step deliberately exits non-zero to simulate a broken build."
+          exit 1
